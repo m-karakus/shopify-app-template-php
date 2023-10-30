@@ -100,6 +100,12 @@ These are the typical steps needed to set up a Laravel app once it's cloned:
     cp .env.example .env
     ```
 
+1. Update the `DB_DATABASE` variable. Put full path for `db.sqlite`
+
+    ```shell
+    sed -i "s|storage/db.sqlite|$(pwd)/storage/db.sqlite|" .env
+    ```  
+
 1. Bootstrap the default [SQLite](https://www.sqlite.org/index.html) database and add it to your `.env` file:
 
     ```shell
